@@ -1,24 +1,24 @@
-import handleSubmit from './handles/handlesubmit';
-import { useRef } from 'react';
 import './App.css';
+import Signup from './components/Signup';
+import Login from './components/Login';
+import { AuthContextProvider } from './app/context/AuthContext';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// import Header from './components/Header';
 
 function App() {
-  const dataRef = useRef<HTMLInputElement>(null)
- 
-  const submithandler = (e: any) => {
-    e.preventDefault()
-    if (dataRef.current) {
-      handleSubmit(dataRef.current.value)
-      dataRef.current.value = ""
-    }
-  }
-
   return (
-    <div className="App">
-      <form onSubmit={submithandler}>
-        <input type= "text" ref={dataRef} />
-        <button type = "submit">Save</button>
-      </form>
+    <div className='App text-light bg-dark min-vh-100'>
+      <Router>
+          <AuthContextProvider>
+            {/* <Header /> */}
+            <Routes>
+              {/* <Route path='/' element={<PrivateRouteDashboard />} /> */}
+              <Route path='/signup' element={<Signup />} />
+              <Route path='/signin' element={<Login />} />
+            </Routes>
+          </AuthContextProvider>
+      </Router>
     </div>
   );
 }
