@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import signUp from "@/firebase/auth/signup";
-import { signInWithGoogle } from "@/firebase/auth/signin";
-import Input from "@/components/Input";
-import Button from "@/components/Button";
+import signUp from "../../firebase/auth/signup";
+import { signInWithGoogle } from "../../firebase/auth/signin";
+import Input from "../components/Input";
+import Button from "../components/Button";
 import { useForm } from "react-hook-form";
-import User from "@/zod/user";
+import User from "../../zod/user";
 import { z } from "zod";
-import { useAuthContext } from "@/context/AuthContext";
+import { useAuthContext } from "../context/AuthContext";
 import SignInWithGoogle from "./SignInWithGoogle";
 
 export default function SignUp() {

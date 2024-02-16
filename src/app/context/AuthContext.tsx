@@ -1,5 +1,4 @@
-"use client";
-import React, {
+import {
   ReactNode,
   createContext,
   useContext,
@@ -7,9 +6,9 @@ import React, {
   useEffect,
 } from "react";
 import { onAuthStateChanged, getAuth } from "firebase/auth";
-import firebase_app from "@/firebase/config";
-import getData from "@/firebase/firestore/getData";
-import Collections from "@/firebase/firestore/collections";
+import firebase_app from "../../firebase/config";
+import getData from "../../firebase/firestore/getData";
+import Collections from "../../firebase/firestore/collections";
 import { useRouter } from "next/navigation";
 
 const auth = getAuth(firebase_app);

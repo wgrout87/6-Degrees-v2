@@ -1,6 +1,6 @@
 import './App.css';
-import Signup from './components/Signup';
-import Login from './components/Login';
+import Signup from './app/components/Signup';
+import Login from './app/components/Login';
 import { AuthContextProvider } from './app/context/AuthContext';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
