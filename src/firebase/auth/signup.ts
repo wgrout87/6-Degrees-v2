@@ -1,8 +1,8 @@
 import firebase_app from "../config";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
-import addData from "@/firebase/firestore/addData";
-import Collections from "@/firebase/firestore/collections";
-import User from "@/zod/user";
+import addData from "../../firebase/firestore/addData";
+import Collections from "../../firebase/firestore/collections";
+import User from "../../zod/user";
 import { z } from "zod";
 
 const auth = getAuth(firebase_app);

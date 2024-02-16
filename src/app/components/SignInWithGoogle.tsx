@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import Button from "@/components/Button";
-import Image from "next/image";
+import Button from "../components/Button";
 
 type Props = {
   clickFunction: () => Promise<void>;
@@ -15,7 +14,7 @@ export default function SignInWithGoogle({ clickFunction }: Props) {
         style="tertiary"
         className="w-full content-center my-2"
       >
-        <Image
+        <img
           className="m-auto"
           src="/google.svg"
           alt="google_logo"

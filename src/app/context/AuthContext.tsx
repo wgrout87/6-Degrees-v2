@@ -9,7 +9,7 @@ import { onAuthStateChanged, getAuth } from "firebase/auth";
 import firebase_app from "../../firebase/config";
 import getData from "../../firebase/firestore/getData";
 import Collections from "../../firebase/firestore/collections";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 
 const auth = getAuth(firebase_app);
 
@@ -29,7 +29,7 @@ export const AuthContext = createContext<{
 export const useAuthContext = () => useContext(AuthContext);
 
 export const AuthContextProvider = ({ children }: { children: ReactNode }) => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const [user, setUser] = useState<Record<string, unknown> | null | undefined>(
     null
   );
@@ -54,7 +54,7 @@ export const AuthContextProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   useEffect(() => {
-    if (authDisplay) router.push("/auth");
+    if (authDisplay) navigate("/auth");
   }, [authDisplay]);
 
   const updateUser = (user: Record<string, unknown> | null | undefined) => {
