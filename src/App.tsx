@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import handleSubmit from './handles/handlesubmit';
+import { useRef } from 'react';
 import './App.css';
 
 function App() {
+  const dataRef = useRef<HTMLInputElement>(null)
+ 
+  const submithandler = (e: any) => {
+    e.preventDefault()
+    if (dataRef.current) {
+      handleSubmit(dataRef.current.value)
+      dataRef.current.value = ""
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form onSubmit={submithandler}>
+        <input type= "text" ref={dataRef} />
+        <button type = "submit">Save</button>
+      </form>
     </div>
   );
 }
