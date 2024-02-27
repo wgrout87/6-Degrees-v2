@@ -1,5 +1,3 @@
-"use client";
-import React from "react";
 import { signIn, signInWithGoogle } from "../../firebase/auth/signin";
 import Input from "../components/Input";
 import Button from "../components/Button";

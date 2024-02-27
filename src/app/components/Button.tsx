@@ -1,4 +1,3 @@
-"use client";
 import { ReactNode, useState, MouseEvent } from "react";
 import classNames from "classnames";
 

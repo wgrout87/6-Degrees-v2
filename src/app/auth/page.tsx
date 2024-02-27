@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import SignUp from "../components/SignUp";
 import SignIn from "../components/SignIn";
 // import Reset from "../components/Reset";
