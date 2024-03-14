@@ -1,0 +1,34 @@
+.root,
+:root.theme_1 {
+  --background-color-1: #004e89;
+  --background-color-2: #1a6593;
+  --bright-color-1: #f7c59f;
+  --bright-color-2: #ff6b35;
+  --highlight-color: #efefd0;
+}
+:root.theme_2 {
+  --background-color-1: #2d3142;
+  --background-color-2: #bfc0c0;
+  --bright-color-1: #4f5d75;
+  --bright-color-2: #ef8354;
+  --highlight-color: #ffffff;
+}
+:root.theme_3 {
+  --background-color-1: #000000;
+  --background-color-2: #14213d;
+  --bright-color-1: #e5e5e5;
+  --bright-color-2: #ffffff;
+  --highlight-color: #fca311;
+}
+
+.theme-btn {
+  width: 3em;
+  height: 3em;
+  padding: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  border: 1px solid black;
+  margin: 0.5em;
+}

@@ -5,6 +5,7 @@ import { AuthContextProvider } from './app/context/AuthContext';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Auth from './app/auth/page'
 import NewGame from './app/components/NewGame';
+import Settings from './app/components/Settings';
 
 // import Header from './components/Header';
 
@@ -19,6 +20,7 @@ function App() {
               <Route path='/auth' element={<Auth />} />
               <Route path='/signup' element={<SignUp />} />
               <Route path='/signin' element={<SignIn />} />
+              <Route path='/settings' element={<Settings />} />
             </Routes>
           </AuthContextProvider>
       </Router>
