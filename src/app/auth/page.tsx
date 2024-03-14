@@ -11,7 +11,7 @@ function Page() {
 
   // This works, but it's slow
   useEffect(() => {
-    if (user) navigate("/admin");
+    if (user) navigate("/");
   }, [user, navigate]);
 
   return (
