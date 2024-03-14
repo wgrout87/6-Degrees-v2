@@ -6,12 +6,15 @@ import { useAuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 function Page() {
-  const { user, authDisplay } = useAuthContext();
+  const { user, authDisplay, changeAuthDisplay } = useAuthContext();
   const navigate = useNavigate();
 
   // This works, but it's slow
   useEffect(() => {
-    if (user) navigate("/");
+    if (user) {
+      navigate("/");
+      changeAuthDisplay(null);
+    };
   }, [user, navigate]);
 
   return (
